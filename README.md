@@ -1,20 +1,14 @@
-# Southern Forest Area Change Tool (SouthFACT)
+# Southern Forest Area Change Tool (SouthFACT) Gatsby Site
 
-https://southfact.github.io/southfact-map-v2/dist/
+https://southfact.github.io/southfact-gatsby-site/
 
-## First iteration of basic viewer
+## First iteration of basic gatsby site
 
-To install
+Once you have done your development work run the following to deploy to gh-pages
 ```
-npm install
-```
-
-To Build dist package
-```
-npm run build
+npm run deploy
 ```
 
-To run dev server
-```
-npm start
-```
+Then navigate to the /map directory on gh-pages branch and upload the dist folder from https://github.com/SouthFACT/southfact-map-v2/tree/master/dist
+
+This is a bit annoying right now but it's what we have. 
