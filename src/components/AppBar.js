@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import Link from '@material-ui/core/Link'
+import Link from '../components/Link';
 import { RouteAnnouncerProps } from '../../.cache/route-announcer-props';
 
 const useStyles = makeStyles((theme) => ({
@@ -37,19 +37,19 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            <Link href='/' color='inherit'>
+            <Link to='/' color='inherit'>
               Home
             </Link>
-            <Link href='/map' color='inherit'>
+            <Link to='/map' color='inherit'>
               Map
             </Link>
-            <Link href='/customRequests' color='inherit'>
+            <Link to='/customRequests' color='inherit'>
               Custom Requests
             </Link>
-            <Link href='/learn' color='inherit'>
+            <Link to='/learn' color='inherit'>
               Learn
             </Link>
-            <Link href='/contact' color='inherit'>
+            <Link to='/contact' color='inherit'>
               Contact
             </Link>
           </Typography>
