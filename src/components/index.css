@@ -9,11 +9,11 @@
   border-top: 1px solid #ccc;
 }
 
-.nav li {
+.link {
   float: left;
   display: block;
   padding: 8px 15px;
   text-decoration: none;
   font-weight: bold;
-  color: #069;
+  color: #ccc;
 }

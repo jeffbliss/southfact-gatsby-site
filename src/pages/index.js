@@ -1,5 +1,6 @@
 import React from "react"
-import '../components/index.css'
+import { Link } from "gatsby"
+import "../components/index.css"
 
 const IndexPage = () => (
   <React.Fragment>
@@ -8,11 +9,36 @@ const IndexPage = () => (
     </h1>
     <h3>
       <ul className='nav'>
-        <li>Home</li>
-        <li>Map</li>
-        <li>Custom Requests</li>
-        <li>Learn</li>
-        <li>Contact</li>
+        <Link 
+          to='/'
+          className='link'
+        >
+          Home
+        </Link>
+        <Link 
+          to='/map'
+          className='link'
+        >
+          Map
+        </Link>
+        <Link 
+          to='/customRequests'
+          className='link'
+        >
+          Custom Requests
+        </Link>
+        <Link 
+          to='/learn'
+          className='link'
+        >
+          Learn
+        </Link>
+        <Link 
+          to='/contact'
+          className='link'
+        >
+          Contact
+        </Link>
       </ul>
     </h3>
   </React.Fragment>
