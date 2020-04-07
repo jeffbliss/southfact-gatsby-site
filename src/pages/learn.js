@@ -1,9 +1,11 @@
 import React from "react"
+import ButtonAppBar from '../components/AppBar'
 
 const learn = () => (
   <React.Fragment>
+    <ButtonAppBar/>
     <h4>
-      Placeholder for learn page until I can get the dropdown implemented
+      Learn Page
     </h4>
   </React.Fragment>
 )

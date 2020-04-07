@@ -1,9 +1,11 @@
 import React from "react"
+import ButtonAppBar from '../components/AppBar'
 
 const customRequests = () => (
   <React.Fragment>
+    <ButtonAppBar/>
     <h4>
-      Placeholder for custom requests page
+      Custom Request Page
     </h4>
   </React.Fragment>
 )

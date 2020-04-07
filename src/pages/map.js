@@ -1,9 +1,11 @@
 import React from "react"
+import ButtonAppBar from '../components/AppBar'
 
 const map = () => (
   <React.Fragment>
+    <ButtonAppBar/>
     <h4>
-      Placeholder for map page
+      Map Page
     </h4>
   </React.Fragment>
 )

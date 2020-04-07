@@ -1,9 +1,11 @@
 import React from "react"
+import ButtonAppBar from '../components/AppBar'
 
 const contact = () => (
   <React.Fragment>
+    <ButtonAppBar/>
     <h4>
-      Placeholder for contact page
+      Contact Page
     </h4>
   </React.Fragment>
 )
