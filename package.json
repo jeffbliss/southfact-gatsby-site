@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "southfact",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Southern Forest Area Change Tools",
+  "version": "1.0.0",
+  "author": "Jeff Bliss <jbliss@unca.edu>",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/SouthFACT/southfact-gatsby-site"
   },
   "dependencies": {
     "gatsby": "^2.19.45",
@@ -38,9 +38,5 @@
   },
   "keywords": [
     "gatsby"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  ]
 }
