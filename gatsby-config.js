@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {

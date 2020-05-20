@@ -5,6 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Link from '../components/Link';
+import { StylesContext } from '@material-ui/styles';
+import "../css/styles.scss";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,17 +39,13 @@ export default function ButtonAppBar() {
               direction="row"
               justify="space-between"
               alignItems="flex-start"
-              lg="5"
+              lg="5" // number of grid components
             >
               <Link to='/' color='inherit'>
                 Home
               </Link>
-              <Link to='/map' color='inherit'>
-                Map
-              </Link>
-              <Link to='/customRequests' color='inherit'>
-                Custom Requests
-              </Link>
+              <a href="https://southfact.github.io/southfact-map-v2/dist/#Home">Map</a>
+              <a href="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true">Custom Requests</a>
               <Link to='/learn' color='inherit'>
                 Learn
               </Link>
