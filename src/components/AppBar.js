@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Link from '../components/Link';
-import { RouteAnnouncerProps } from '../../.cache/route-announcer-props';
 
 const useStyles = makeStyles((theme) => ({
   root: {

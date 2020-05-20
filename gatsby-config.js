@@ -9,7 +9,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-material-ui`
+    `gatsby-plugin-material-ui`,
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
