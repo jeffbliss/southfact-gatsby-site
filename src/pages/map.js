@@ -1,5 +1,4 @@
 import React from "react"
-import Link from "../components/Link"
 import ButtonAppBar from '../components/AppBar'
 
 const map = () => (
