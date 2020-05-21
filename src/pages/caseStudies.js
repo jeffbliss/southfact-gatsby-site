@@ -2,16 +2,16 @@ import React from "react"
 import ButtonAppBar from '../components/AppBar'
 import Typography from '@material-ui/core/Typography';
 
-const contact = () => (
+const caseStudies = () => (
   <React.Fragment>
     <ButtonAppBar/>
     <Typography variant="h4">
-      Contact
+      Case studies
     </Typography>
     <Typography variant="h5">
-      If you have any questions, comments, or concerns please send an email to info@southfact.com 
+      A play to add case studies 
     </Typography>
   </React.Fragment>
 )
 
-export default contact
+export default caseStudies

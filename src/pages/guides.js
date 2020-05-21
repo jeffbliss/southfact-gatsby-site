@@ -2,16 +2,16 @@ import React from "react"
 import ButtonAppBar from '../components/AppBar'
 import Typography from '@material-ui/core/Typography';
 
-const contact = () => (
+const guides = () => (
   <React.Fragment>
     <ButtonAppBar/>
     <Typography variant="h4">
-      Contact
+      Guides
     </Typography>
     <Typography variant="h5">
-      If you have any questions, comments, or concerns please send an email to info@southfact.com 
+      Video: How to Create an Account
     </Typography>
   </React.Fragment>
 )
 
-export default contact
+export default guides
