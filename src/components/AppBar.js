@@ -78,11 +78,21 @@ export default function ButtonAppBar() {
               justify="flex-start"
               alignItems="flex-start"
             >
-              <Link to='/' color='inherit'>
-                Home
-              </Link>
-              <a href="https://southfact.github.io/southfact-map-v2/dist/#Home">Map</a>
-              <a href="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true">Custom Requests</a>
+              <Button color='inherit'>
+                <Link to='/' color='inherit'>
+                  Home
+                </Link>
+              </Button>
+              <Button color='inherit'>
+                <a href="https://southfact.github.io/southfact-map-v2/dist/#Home">
+                  Map
+                </a>
+              </Button>
+              <Button color='inherit'>
+              <a href="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true">
+                Custom Requests
+              </a>
+              </Button>
               <div>
                 <Button
                   ref={anchorRef}
@@ -144,9 +154,11 @@ export default function ButtonAppBar() {
                 )}
                 </Popper>
               </div>
-              <Link to='/contact' color='inherit'>
-                Contact
-              </Link>
+              <Button color='inherit'>
+                <Link to='/contact' color='inherit'>
+                  Contact
+                </Link>
+              </Button>
             </Grid>
           </Typography>
         </Toolbar>
