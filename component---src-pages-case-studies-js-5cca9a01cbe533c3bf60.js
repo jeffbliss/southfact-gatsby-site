@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{Bxj0:function(e,a,t){"use strict";t.r(a);var n=t("q1tI"),r=t.n(n),s=t("ZmoE"),c=t("ofer");a.default=function(){return r.a.createElement(r.a.Fragment,null,r.a.createElement(s.a,null),r.a.createElement(c.a,{variant:"h4"},"Case studies"),r.a.createElement(c.a,{variant:"h5"},"A play to add case studies"))}}}]);
+//# sourceMappingURL=component---src-pages-case-studies-js-5cca9a01cbe533c3bf60.js.map
