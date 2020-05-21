@@ -10,16 +10,19 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
   card: {
     minWidth: 275,
-    backgroundColor: 'black',
-    color: 'white',
-
+    backgroundColor: '#101012',
+    color: '#FCFCF5',
   },
   cardActions: {
     justifyContent: 'center',
   },
   button: {
-    backgroundColor: 'orange',
-    color: 'white',
+    backgroundColor: '#9F5222',
+    color: '#FCFCF5',
+    textTransform: "none",
+    '&:hover': {
+      backgroundColor: '#D9A265',
+    },
   },
   title: {
     marginBottom: 16,

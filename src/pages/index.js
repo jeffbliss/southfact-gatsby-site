@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    backgroundColor: 'grey'
+    backgroundColor: '#707070'
   },
 }));
 
@@ -20,7 +20,7 @@ export default function IndexPage() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <React.Fragment className={classes.root}>
       <ButtonAppBar/>
       <Typography variant="h4" align='center'>
         SouthFACT
