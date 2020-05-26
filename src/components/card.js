@@ -32,7 +32,7 @@ function SimpleCard({ content, buttonLink }) {
     <div>
       <Card className={classes.card}>
         <CardContent>
-          <Typography>
+          <Typography align="center">
             {content}
           </Typography>
         </CardContent>
