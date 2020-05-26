@@ -3,27 +3,12 @@ import ButtonAppBar from '../components/AppBar'
 import Card from '../components/card'
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
 import Link from '../components/Link';
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary
-  }
-}));
 
 export default function IndexPage() {
-  const classes = useStyles();
 
   return (
-    <div className={classes.root} maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh' }}>
+    <Grid maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh' }}>
       <ButtonAppBar/>
       <Typography variant="h4" align='center' style={{ color: 'white'}}>
         SouthFACT
@@ -63,6 +48,6 @@ export default function IndexPage() {
           />
         </Grid>
       </Grid>
-    </div>
+    </Grid>
   )
 }
