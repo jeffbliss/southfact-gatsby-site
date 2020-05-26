@@ -15,7 +15,7 @@ import Popper from '@material-ui/core/Popper';
 import Paper from '@material-ui/core/Paper';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
-import "../css/styles.scss";
+import "../css/southfactStyles.scss";
 
 const useStyles = makeStyles((theme) => ({
   button: {

@@ -40,7 +40,7 @@ function SimpleCard({ content, buttonLink }) {
     <div>
       <Card className={classes.card}>
         <CardContent>
-          <Typography component="p">
+          <Typography>
             {content}
           </Typography>
         </CardContent>

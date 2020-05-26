@@ -1,31 +1,22 @@
 import React from "react"
-import { makeStyles } from '@material-ui/core/styles';
 import ButtonAppBar from '../components/AppBar'
 import Card from '../components/card'
-import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Link from '../components/Link';
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    backgroundColor: '#707070'
-  },
-}));
-
 export default function IndexPage() {
-  const classes = useStyles();
 
   return (
-    <Container maxWidth="xl" className={classes.container}>
+    <Grid maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh' }}>
       <ButtonAppBar/>
-      <Typography variant="h4" align='center'>
+      <Typography variant="h4" align='center' style={{ color: 'white'}}>
         SouthFACT
       </Typography>
-      <Typography variant="h6" align='center'>
+      <Typography variant="h6" align='center' style={{ color: 'white'}}>
         Tools to identify and quantify
       </Typography>
-      <Typography variant="h6" align='center'>
+      <Typography variant="h6" align='center' style={{ color: 'white'}}>
         changes in southern forests.
       </Typography>
       <br></br>
@@ -36,27 +27,27 @@ export default function IndexPage() {
       <Grid
         container
         justify="center"
-        spacing={10}
+        spacing={3}
       >
-        <Grid item>
+        <Grid item lg={3} sm={6}>
           <Card 
            content="Recent and historical yearly changes"
            buttonLink={<a href="https://southfact.github.io/southfact-map-v2/dist/#Home">Forest Change Viewer</a>}
           />
         </Grid>
-        <Grid item>
+        <Grid item lg={3} sm={6}>
           <Card 
             content="Identify change for specific areas and times"
             buttonLink={<a href="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true">Create Custom Requests</a>}
           />
         </Grid>
-        <Grid item>
+        <Grid item lg={3} sm={6}>
           <Card 
             content="Learn more about the tools and this site"
             buttonLink={<Link to='/about' color='inherit'>About</Link>}
           />
         </Grid>
       </Grid>
-    </Container>
+    </Grid>
   )
 }
