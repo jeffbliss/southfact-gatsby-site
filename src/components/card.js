@@ -9,7 +9,6 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    minWidth: 275,
     backgroundColor: '#101012',
     color: '#FCFCF5',
   },
@@ -23,13 +22,6 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: '#D9A265',
     },
-  },
-  title: {
-    marginBottom: 16,
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
   },
 }));
 
