@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"P+Eh":function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),o=a.n(n),r=a("ZmoE"),c=a("ofer"),l=a("tRbT");t.default=function(){return o.a.createElement(l.a,{style:{backgroundColor:"#707070",height:"100vh"},maxWidth:"xl"},o.a.createElement(r.a,null),o.a.createElement(c.a,{variant:"h4",style:{color:"white"}},"Guides"),o.a.createElement(c.a,{variant:"h5",style:{color:"white"}},"Video: How to Create an Account"))}}}]);
+//# sourceMappingURL=component---src-pages-guides-js-eebdf1d9aad90e578edf.js.map
