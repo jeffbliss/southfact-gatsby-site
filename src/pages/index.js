@@ -2,16 +2,13 @@ import React from "react"
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonAppBar from '../components/AppBar'
 import Card from '../components/card'
+import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Link from '../components/Link';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
+  container: {
     backgroundColor: '#707070'
   },
 }));
@@ -20,7 +17,7 @@ export default function IndexPage() {
   const classes = useStyles();
 
   return (
-    <React.Fragment className={classes.root}>
+    <Container maxWidth="xl" className={classes.container}>
       <ButtonAppBar/>
       <Typography variant="h4" align='center'>
         SouthFACT
@@ -60,6 +57,6 @@ export default function IndexPage() {
           />
         </Grid>
       </Grid>
-    </React.Fragment>
+    </Container>
   )
 }
