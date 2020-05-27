@@ -27,6 +27,5 @@ jobs:
       run: |
         git config user.email "$GITHUB_ACTOR"
         git config user.name "$GITHUB_ACTOR"
-        git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/southfact/southfact-gatsby-site.git
         npm install
         npm run deploy
