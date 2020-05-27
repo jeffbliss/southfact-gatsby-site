@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `SouthFACT`,
     description: `Southern Forest Area Change Tools - SouthFACT`,
-    author: `jbliss`,
+    author: `jbliss, dmichelson`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
