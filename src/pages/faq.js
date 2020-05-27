@@ -45,9 +45,7 @@ const faq = ({
       <Typography variant="h4" style={{ color: 'white'}}>
         Frequently Asked Questions (FAQs)
       </Typography>
-      <Typography variant="h5" style={{ color: 'white'}}>
-        {Posts}
-      </Typography>
+      {Posts}
     </Grid>
   )
 }
