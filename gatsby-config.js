@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: "/southfact-gatsby-site",
   siteMetadata: {
-    title: `Southern Forest Area Change Tools - SouthFACT`,
-    description: `SouthFACT!`,
+    title: `SouthFACT`,
+    description: `Southern Forest Area Change Tools - SouthFACT`,
     author: `jbliss`,
   },
   plugins: [
@@ -16,7 +16,15 @@ module.exports = {
       options: {
         linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
-    }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

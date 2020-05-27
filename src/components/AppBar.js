@@ -38,13 +38,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const defaultTheme = createMuiTheme();
-const theme = createMuiTheme({
-  typography: {
-    button: {
-      textTransform: "none"
-    }
-  }
-});
 
 export default function ButtonAppBar() {
   const classes = useStyles();

@@ -1,17 +1,25 @@
 import React from "react"
-import ButtonAppBar from '../components/AppBar'
-import Card from '../components/card'
-import Typography from '@material-ui/core/Typography';
+import { Helmet } from "react-helmet"
+import { graphql } from 'gatsby'
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import AppBar from '../components/AppBar'
+import Card from '../components/card'
 import Link from '../components/Link';
 
-export default function IndexPage() {
+export default function IndexPage({ data }) {
 
   return (
-    <Grid maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh'}}>
-      <ButtonAppBar/>
+    <Grid maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh', padding: 5 }}>
+      <Helmet>
+        <meta // responsive meta tag: https://material-ui.com/getting-started/usage/#responsive-meta-tag
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+      </Helmet>
+      <AppBar/>
       <Typography variant="h4" align='center' style={{ color: 'white'}}>
-        SouthFACT
+        {data.site.siteMetadata.title}
       </Typography>
       <Typography variant="h6" align='center' style={{ color: 'white'}}>
         Tools to identify and quantify
@@ -28,7 +36,7 @@ export default function IndexPage() {
         container
         justify="center"
         spacing={3}
-        style={{ padding: 20 }}
+        style={{ padding: 10 }}
       >
         <Grid item sm={3} xs={12}>
           <Card 
@@ -52,3 +60,13 @@ export default function IndexPage() {
     </Grid>
   )
 }
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
