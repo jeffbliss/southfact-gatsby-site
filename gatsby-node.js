@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+/*exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const markdownTemplate = require.resolve(`./src/templates/markdownTemplate.js`)
@@ -42,4 +42,4 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     })
   })
-}
+}*/

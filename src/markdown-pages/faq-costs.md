@@ -1,5 +1,5 @@
 ---
-path: "/faq/costs"
+slug: "/faq/costs"
 date: "2020-05-27"
 title: "Are there costs associated with using the SouthFACT applications?"
 ---
