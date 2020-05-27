@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{"Cuy+":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a);n.default=function(){return c.a.createElement(c.a.Fragment,null,c.a.createElement("h4",null,"Placeholder for contact page"))}}}]);
-//# sourceMappingURL=component---src-pages-contact-js-01a0e52217bca9a3a1f8.js.map

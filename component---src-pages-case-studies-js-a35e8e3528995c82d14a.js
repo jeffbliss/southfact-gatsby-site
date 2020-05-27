@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{Bxj0:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),o=a.n(n),r=a("ZmoE"),l=a("ofer"),s=a("tRbT");t.default=function(){return o.a.createElement(s.a,{style:{backgroundColor:"#707070",height:"100vh"},maxWidth:"xl"},o.a.createElement(r.a,null),o.a.createElement(l.a,{variant:"h4",style:{color:"white"}},"Case studies"),o.a.createElement(l.a,{variant:"h5",style:{color:"white"}},"A play to add case studies"))}}}]);
-//# sourceMappingURL=component---src-pages-case-studies-js-a35e8e3528995c82d14a.js.map
