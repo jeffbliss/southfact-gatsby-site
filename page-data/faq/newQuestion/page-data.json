@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-markdown-template-js","path":"/faq/newQuestion","result":{"data":{"markdownRemark":{"html":"<p>Hello whomever clicked on this! </p>","frontmatter":{"date":"May 27, 2020","path":"/faq/newQuestion","title":"This is a new faq question to test if gh-pages auto deploys when creating new markdown file"}}},"pageContext":{}}}
