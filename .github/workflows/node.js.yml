@@ -24,10 +24,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Deploy to GH Pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config user.email "$GITHUB_ACTOR"
         git config user.name "$GITHUB_ACTOR"
+        git remote set-url origin https://${{ secrets.GH_ACTION_TOKEN }}@github.com/southfact/southfact-gatsby-site.git
         npm install
         npm run deploy
