@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '../components/AppBar'
 
-import Draggable from 'react-draggable';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -19,7 +18,6 @@ const faq = ({
 }) => {
   const Posts = edges
     .map(edge =>
-      <Draggable> 
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
@@ -34,7 +32,6 @@ const faq = ({
           <Typography variant="h6" dangerouslySetInnerHTML={{ __html: edge.node.html }}/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      </Draggable> 
     )
   return (
     <Grid style={{ backgroundColor: '#707070', height: '100vh' }} maxWidth="xl">
