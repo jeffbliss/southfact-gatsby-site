@@ -4,16 +4,35 @@ import { graphql } from 'gatsby'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '../components/AppBar'
-import PostLink from "../components/post-link"
 
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+//<PostLink key={edge.node.id} post={edge.node} />
 const faq = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .map(edge => 
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography variant="h5" style={{ color: 'black'}}>
+            {edge.node.frontmatter.title}
+          </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography variant="h6" dangerouslySetInnerHTML={{ __html: edge.node.html }}/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+    )
   return (
     <Grid style={{ backgroundColor: '#707070', height: '100vh' }} maxWidth="xl">
       <Helmet>
@@ -42,6 +61,7 @@ export const pageQuery = graphql`
         node {
           id
           excerpt(pruneLength: 250)
+          html
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             path
