@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import AppBar from '../components/AppBar'
 
 const guides = () => (
-  <Grid style={{ backgroundColor: '#707070', height: '100vh' }} maxWidth="xl">
+  <Grid maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh', padding: 5 }}>
     <Helmet>
       <meta // responsive meta tag: https://material-ui.com/getting-started/usage/#responsive-meta-tag
         name="viewport"
@@ -13,7 +13,7 @@ const guides = () => (
       />
     </Helmet>
     <AppBar/>
-    <Typography variant="h4" style={{ color: 'white'}}>
+    <Typography variant="h3" style={{ color: 'white'}}>
       Guides
     </Typography>
     <Typography variant="h5" style={{ color: 'white'}}>

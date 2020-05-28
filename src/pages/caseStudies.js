@@ -4,9 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '../components/AppBar'
 
-
 const caseStudies = () => (
-  <Grid style={{ backgroundColor: '#707070', height: '100vh' }} maxWidth="xl">
+  <Grid maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh', padding: 5 }}>
     <Helmet>
       <meta // responsive meta tag: https://material-ui.com/getting-started/usage/#responsive-meta-tag
         name="viewport"
@@ -14,7 +13,7 @@ const caseStudies = () => (
       />
     </Helmet>
     <AppBar/>
-    <Typography variant="h4" style={{ color: 'white'}}>
+    <Typography variant="h3" style={{ color: 'white'}}>
       Case studies
     </Typography>
     <Typography variant="h5" style={{ color: 'white'}}>

@@ -5,11 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '../components/AppBar'
 
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
 //<PostLink key={edge.node.id} post={edge.node} />
 const faq = ({
   data: {
@@ -18,23 +13,15 @@ const faq = ({
 }) => {
   const Posts = edges
     .map(edge =>
-      <ExpansionPanel>
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography variant="h5" style={{ color: 'black'}}>
-            {edge.node.frontmatter.title}
-          </Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography variant="h6" dangerouslySetInnerHTML={{ __html: edge.node.html }}/>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+      <React.Fragment>
+        <Typography variant="h4" style={{ color: 'white'}}>
+          {edge.node.frontmatter.title}
+        </Typography>
+        <Typography variant="h6" dangerouslySetInnerHTML={{ __html: edge.node.html }} style={{ color: 'white'}}/> 
+      </React.Fragment>
     )
   return (
-    <Grid style={{ backgroundColor: '#707070', height: '100vh' }} maxWidth="xl">
+    <Grid maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh', padding: 5 }}>
       <Helmet>
         <meta // responsive meta tag: https://material-ui.com/getting-started/usage/#responsive-meta-tag
           name="viewport"
@@ -42,7 +29,7 @@ const faq = ({
         />
       </Helmet>
       <AppBar/>
-      <Typography variant="h4" style={{ color: 'white'}}>
+      <Typography variant="h3" style={{ color: 'white'}}>
         Frequently Asked Questions (FAQs)
       </Typography>
       {Posts}

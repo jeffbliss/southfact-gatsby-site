@@ -18,13 +18,13 @@ export default function IndexPage({ data }) {
         />
       </Helmet>
       <AppBar/>
-      <Typography variant="h4" align='center' style={{ color: 'white'}}>
+      <Typography variant="h3" align='center' style={{ color: 'white'}}>
         {data.site.siteMetadata.title}
       </Typography>
-      <Typography variant="h6" align='center' style={{ color: 'white'}}>
+      <Typography variant="h5" align='center' style={{ color: 'white'}}>
         Tools to identify and quantify
       </Typography>
-      <Typography variant="h6" align='center' style={{ color: 'white'}}>
+      <Typography variant="h5" align='center' style={{ color: 'white'}}>
         changes in southern forests.
       </Typography>
       <br></br>
