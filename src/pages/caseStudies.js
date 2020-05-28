@@ -1,11 +1,14 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '../components/AppBar'
+import customTheme from '../theme'
 
 const caseStudies = () => (
-  <Grid maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh', padding: 5 }}>
+  <ThemeProvider theme={customTheme}>
     <Helmet>
       <meta // responsive meta tag: https://material-ui.com/getting-started/usage/#responsive-meta-tag
         name="viewport"
@@ -13,13 +16,16 @@ const caseStudies = () => (
       />
     </Helmet>
     <AppBar/>
-    <Typography variant="h3" style={{ color: 'white'}}>
-      Case studies
-    </Typography>
-    <Typography variant="h5" style={{ color: 'white'}}>
-      A play to add case studies 
-    </Typography>
-  </Grid>
+    <Box p={1}>
+      <Typography variant="h3">
+        Case Studies
+      </Typography>
+      <Typography variant="h5">
+        Add Case Studies here
+      </Typography>
+    </Box>
+    <CssBaseline/>
+  </ThemeProvider>
 )
 
 export default caseStudies

@@ -6,11 +6,14 @@ import Typography from '@material-ui/core/Typography';
 import AppBar from '../components/AppBar'
 import Card from '../components/card'
 import Link from '../components/Link';
+import { ThemeProvider } from '@material-ui/core/styles';
+import customTheme from '../theme'
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 export default function IndexPage({ data }) {
 
   return (
-    <Grid maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh', padding: 5 }}>
+    <ThemeProvider theme={customTheme}>
       <Helmet>
         <meta // responsive meta tag: https://material-ui.com/getting-started/usage/#responsive-meta-tag
           name="viewport"
@@ -18,13 +21,13 @@ export default function IndexPage({ data }) {
         />
       </Helmet>
       <AppBar/>
-      <Typography variant="h3" align='center' style={{ color: 'white'}}>
+      <Typography variant="h3" align='center'>
         {data.site.siteMetadata.title}
       </Typography>
-      <Typography variant="h5" align='center' style={{ color: 'white'}}>
+      <Typography variant="h5" align='center'>
         Tools to identify and quantify
       </Typography>
-      <Typography variant="h5" align='center' style={{ color: 'white'}}>
+      <Typography variant="h5" align='center'>
         changes in southern forests.
       </Typography>
       <br></br>
@@ -40,24 +43,27 @@ export default function IndexPage({ data }) {
       >
         <Grid item sm={3} xs={12}>
           <Card 
-           content="Recent and historical yearly changes"
-           buttonLink={<a href="https://southfact.github.io/southfact-map-v2/dist/#Home">Forest Change Viewer</a>}
+          content="Recent and historical yearly changes"
+          externalLinkText="Forest Change Viewer"
+          externalLink="https://southfact.github.io/southfact-map-v2/dist/#Home"
           />
         </Grid>
         <Grid item sm={3} xs={12}>
           <Card 
             content="Identify change for specific areas and times"
-            buttonLink={<a href="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true">Create Custom Requests</a>}
+            externalLinkText="Create Custom Requests"
+            externalLink="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true"
           />
         </Grid>
         <Grid item sm={3} xs={12}>
           <Card 
             content="Learn more about the tools and this site"
-            buttonLink={<Link to='/about' color='inherit'>About</Link>}
+            internalLink={<Link to='/about'> About </Link>}
           />
         </Grid>
       </Grid>
-    </Grid>
+      <CssBaseline/>
+    </ThemeProvider>
   )
 }
 

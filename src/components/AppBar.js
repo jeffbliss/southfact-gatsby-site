@@ -15,7 +15,7 @@ import Popper from '@material-ui/core/Popper';
 import Paper from '@material-ui/core/Paper';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
-import "../css/southfactStyles.scss";
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -76,26 +76,24 @@ export default function ButtonAppBar() {
   return (
     <MuiThemeProvider theme={defaultTheme}>
       <AppBar className={classes.root} position="static">
-        <Typography variant="h5" className={classes.title}>
-          Southern Forest Area Change Tools - SouthFACT
-        </Typography>
+        <Box px={3} py={1}>
+          <Typography variant="h5">
+            Southern Forest Area Change Tools - SouthFACT
+          </Typography>
+        </Box>
         <Toolbar mr={10}>
           <Button className={classes.button} size='large' color='inherit'>
             <Link to='/' color='inherit'>
               Home
             </Link>
           </Button>
-          <Button className={classes.button} size='large' color='inherit'>
-            <a href="https://southfact.github.io/southfact-map-v2/dist/#Home">
-              Map
-            </a>
+          <Button className={classes.button} size='large' color='inherit' href="https://southfact.github.io/southfact-map-v2/dist/#Home">
+            Map
           </Button>
-          <Button className={classes.button} size='large' color='inherit'>
-          <a href="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true">
+          <Button className={classes.button} size='large' color='inherit' href="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true">
             Custom Requests
-          </a>
           </Button>
-          <div>
+          <Box>
             <Button
               className={classes.button}
               ref={anchorRef}
@@ -157,7 +155,7 @@ export default function ButtonAppBar() {
               </Grow>
             )}
             </Popper>
-          </div>
+          </Box>
           <Button className={classes.button} size='large' color='inherit'>
             <Link to='/contact' color='inherit'>
               Contact

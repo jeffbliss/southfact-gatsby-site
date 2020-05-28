@@ -1,9 +1,12 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from 'gatsby'
-import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '../components/AppBar'
+import customTheme from '../theme'
 
 //<PostLink key={edge.node.id} post={edge.node} />
 const faq = ({
@@ -14,14 +17,14 @@ const faq = ({
   const Posts = edges
     .map(edge =>
       <React.Fragment>
-        <Typography variant="h4" style={{ color: 'white'}}>
+        <Typography variant="h5">
           {edge.node.frontmatter.title}
         </Typography>
-        <Typography variant="h6" dangerouslySetInnerHTML={{ __html: edge.node.html }} style={{ color: 'white'}}/> 
+        <Typography variant="body1" dangerouslySetInnerHTML={{ __html: edge.node.html }}/> 
       </React.Fragment>
     )
   return (
-    <Grid maxWidth="xl" style={{ backgroundColor: '#707070', height: '100vh', padding: 5 }}>
+    <ThemeProvider theme={customTheme}>
       <Helmet>
         <meta // responsive meta tag: https://material-ui.com/getting-started/usage/#responsive-meta-tag
           name="viewport"
@@ -29,11 +32,14 @@ const faq = ({
         />
       </Helmet>
       <AppBar/>
-      <Typography variant="h3" style={{ color: 'white'}}>
-        Frequently Asked Questions (FAQs)
-      </Typography>
-      {Posts}
-    </Grid>
+      <Box p={1}>
+        <Typography variant="h3">
+          Frequently Asked Questions (FAQs)
+        </Typography>
+        {Posts}
+      </Box>
+      <CssBaseline/>
+    </ThemeProvider>
   )
 }
 
