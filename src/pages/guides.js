@@ -16,7 +16,7 @@ const guides = ({
   const Guides = edges
     .map(edge =>
       <React.Fragment>
-        <Typography variant="body1" dangerouslySetInnerHTML={{ __html: `<div>${edge.node.html}</div>` }}/>
+        <Typography variant="h6" dangerouslySetInnerHTML={{ __html: edge.node.html }}/>
       </React.Fragment>
     )
   return (
