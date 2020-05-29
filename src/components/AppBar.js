@@ -115,38 +115,33 @@ export default function ButtonAppBar() {
                   <ClickAwayListener onClickAway={handleClose}>
                     <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                       <MenuItem onClick={handleClose}>
-                        <Link to='/about' color='inherit'>
+                        <Link to='/about'>
                           About
                         </Link>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
-                        <Link to='/caseStudies' color='inherit'>
+                        <Link to='/caseStudies'>
                           Case Studies
                         </Link>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
-                        <Link to='/faq' color='inherit'>
+                        <Link to='/faq'>
                           Frequently Asked Questions
                         </Link>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
-                        <Link to='/guides' color='inherit'>
+                        <Link to='/guides'>
                           Guides
                         </Link>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
-                        <Link to='/resources' color='inherit'>
+                        <Link to='/resources'>
                           Resources
                         </Link>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
-                        <Link to='/methods' color='inherit'>
+                        <Link to='/methods'>
                           Methods
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        <Link to='/guides' color='inherit'>
-                          Guides
                         </Link>
                       </MenuItem>
                     </MenuList>
