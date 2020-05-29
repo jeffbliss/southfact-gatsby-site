@@ -44,21 +44,21 @@ export default function IndexPage({ data }) {
         <Grid item sm={3} xs={12}>
           <Card 
           content="Recent and historical yearly changes"
-          externalLinkText="Forest Change Viewer"
-          externalLink="https://southfact.github.io/southfact-map-v2/dist/#Home"
+          href="https://southfact.github.io/southfact-map-v2/dist/#Home"
+          linkText="Forest Change Viewer"
           />
         </Grid>
         <Grid item sm={3} xs={12}>
           <Card 
             content="Identify change for specific areas and times"
-            externalLinkText="Create Custom Requests"
-            externalLink="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true"
+            href="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true"
+            linkText="Create Custom Requests"
           />
         </Grid>
         <Grid item sm={3} xs={12}>
           <Card 
             content="Learn more about the tools and this site"
-            internalLink={<Link to='/about'> About </Link>}
+            linkText={<Link to='/about'> About </Link>}
           />
         </Grid>
       </Grid>

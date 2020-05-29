@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SimpleCard({ content, externalLinkText, externalLink, internalLink }) {
+function SimpleCard({ content, href, linkText }) {
   const classes = useStyles();
 
   return (
@@ -25,10 +25,9 @@ function SimpleCard({ content, externalLinkText, externalLink, internalLink }) {
       <CardActions className={classes.cardActions}>
         <Button
           size="small"
-          href={externalLink}
+          href={href}
         >
-          {externalLinkText}
-          {internalLink}
+          {linkText}
         </Button>
       </CardActions>
     </Card>
