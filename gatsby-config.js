@@ -1,9 +1,10 @@
 module.exports = {
   pathPrefix: "/southfact-gatsby-site",
   siteMetadata: {
-    title: `SouthFACT`,
-    description: `Southern Forest Area Change Tools - SouthFACT`,
     author: `jbliss, dmichelson`,
+    githubRepo: "https://github.com/SouthFACT/southfact-gatsby-site",
+    description: `Southern Forest Area Change Tools - SouthFACT`,
+    title: `SouthFACT`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
