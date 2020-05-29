@@ -15,8 +15,7 @@ const faq = ({
         <Typography variant="h5">
           {edge.node.frontmatter.title}
         </Typography>
-          {edge.node.html}
-        {/*<Typography variant="body1" dangerouslySetInnerHTML={{ __html: edge.node.html }}/>*/} 
+        <Typography variant="body1" dangerouslySetInnerHTML={{ __html: `<div>${edge.node.html}</div>` }}/>
       </React.Fragment>
     )
   return (
