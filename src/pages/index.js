@@ -1,26 +1,15 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import { graphql } from 'gatsby'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import AppBar from '../components/AppBar'
 import Card from '../components/card'
 import Link from '../components/Link';
-import { ThemeProvider } from '@material-ui/core/styles';
-import customTheme from '../theme'
-import CssBaseline from '@material-ui/core/CssBaseline';
+import Layout from "../components/layout"
 
 export default function IndexPage({ data }) {
 
   return (
-    <ThemeProvider theme={customTheme}>
-      <Helmet>
-        <meta // responsive meta tag: https://material-ui.com/getting-started/usage/#responsive-meta-tag
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-      </Helmet>
-      <AppBar/>
+    <Layout>
       <Typography variant="h3" align='center'>
         {data.site.siteMetadata.title}
       </Typography>
@@ -62,8 +51,7 @@ export default function IndexPage({ data }) {
           />
         </Grid>
       </Grid>
-      <CssBaseline/>
-    </ThemeProvider>
+    </Layout>
   )
 }
 
@@ -72,6 +60,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
   }
