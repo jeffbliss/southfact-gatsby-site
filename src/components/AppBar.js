@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery, graphql } from "gatsby"
 import { 
   makeStyles,
   createMuiTheme,
@@ -40,6 +41,18 @@ const useStyles = makeStyles((theme) => ({
 const defaultTheme = createMuiTheme();
 
 export default function ButtonAppBar() {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            description
+          }
+        }
+      }
+    `
+  )
+
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -78,7 +91,7 @@ export default function ButtonAppBar() {
       <AppBar className={classes.root} position="static">
         <Box px={3} py={1}>
           <Typography variant="h5">
-            Southern Forest Area Change Tools - SouthFACT
+            {data.site.siteMetadata.description}
           </Typography>
         </Box>
         <Toolbar mr={10}>
