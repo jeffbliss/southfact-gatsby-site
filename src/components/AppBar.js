@@ -45,6 +45,7 @@ export default function ButtonAppBar() {
     graphql`
       query {
         site {
+          buildTime(formatString: "YYYY-MM-DD HH:mm:ss z")
           siteMetadata {
             description
           }
@@ -92,6 +93,9 @@ export default function ButtonAppBar() {
         <Box px={3} py={1}>
           <Typography variant="h5">
             {data.site.siteMetadata.description}
+          </Typography>
+          <Typography>
+            Last build time: {data.site.buildTime}
           </Typography>
         </Box>
         <Toolbar mr={10}>
