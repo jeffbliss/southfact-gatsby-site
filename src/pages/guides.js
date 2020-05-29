@@ -16,7 +16,8 @@ const guides = ({
   const Guides = edges
     .map(edge =>
       <React.Fragment>
-        <Typography variant="h6" dangerouslySetInnerHTML={{ __html: edge.node.html }}/>
+        {/*change component to div because of this bug: https://github.com/gatsbyjs/gatsby/issues/11108*/}
+        <Typography variant="body1" component="div" dangerouslySetInnerHTML={{ __html: edge.node.html }}/>
       </React.Fragment>
     )
   return (

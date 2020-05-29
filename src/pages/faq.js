@@ -15,7 +15,8 @@ const faq = ({
         <Typography variant="h5">
           {edge.node.frontmatter.title}
         </Typography>
-          <Typography variant="h6" dangerouslySetInnerHTML={{ __html: edge.node.html }}/>
+          {/*change component to div because of this bug: https://github.com/gatsbyjs/gatsby/issues/11108*/}
+          <Typography variant="body1" component="div" dangerouslySetInnerHTML={{ __html: edge.node.html }}/>
       </React.Fragment>
     )
   return (
