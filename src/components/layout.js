@@ -16,7 +16,7 @@ export default function Layout({ children }) {
         />
       </Helmet>
       <AppBar/>
-      <Box p={1}>
+      <Box p={2}>
         {children}
       </Box>
       <CssBaseline/>
