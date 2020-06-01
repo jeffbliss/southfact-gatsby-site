@@ -16,7 +16,17 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
+      path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-tinacms",
+      options: {
+        sidebar: {
+          hidden: process.env.NODE_ENV === "production",
+          position: "displace",
+        },
+        plugins: ["gatsby-tinacms-git", "gatsby-tinacms-remark"],
       },
     },
     `gatsby-transformer-remark`,
