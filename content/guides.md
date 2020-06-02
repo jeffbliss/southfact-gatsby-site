@@ -1,6 +1,6 @@
 ---
 title: Guides
 date: "2019-05-31"
-description: "Frequently Asked Questions"
+description: "Guides"
 ---
 Here's some markdown for the guides
