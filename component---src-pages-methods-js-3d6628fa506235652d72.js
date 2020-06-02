@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{I2Wq:function(e,n,t){"use strict";t.r(n),t.d(n,"default",(function(){return l}));var a=t("q1tI"),r=t.n(a),o=t("Bl7J"),c=t("ofer");function l(){return r.a.createElement(o.a,null,r.a.createElement(c.a,{variant:"h3"},"Methods"),r.a.createElement(c.a,{variant:"h5"},"Placeholder for Methods"))}}}]);
-//# sourceMappingURL=component---src-pages-methods-js-3d6628fa506235652d72.js.map
