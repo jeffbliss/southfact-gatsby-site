@@ -36,8 +36,9 @@ function FaqTemplate(props) {
 
   return (
     <Layout>
-      <Typography variant="h4"></Typography>
+      <Typography variant="h4">
         {page.frontmatter.title}
+      </Typography>
       <Typography>
         <div dangerouslySetInnerHTML={{ __html: page.html }} />
       </Typography>
