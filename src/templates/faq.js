@@ -3,37 +3,16 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Typography from '@material-ui/core/Typography';
 import { TinaCMS } from 'tinacms'
-import { remarkForm, useLocalRemarkForm } from 'gatsby-tinacms-remark'
+import { remarkForm } from 'gatsby-tinacms-remark'
 import { HtmlFieldPlugin, MarkdownFieldPlugin } from 'react-tinacms-editor'
-import {
-  InlineForm,
-  InlineTextField,
-  InlineWysiwyg,
-} from "react-tinacms-inline"
-import { usePlugins } from 'tinacms'
 
-function FaqTemplate(props) {
-  usePlugins([HtmlFieldPlugin, MarkdownFieldPlugin])
+const cms = new TinaCMS()
 
+cms.plugins.add(HtmlFieldPlugin)
+cms.plugins.add(MarkdownFieldPlugin)
 
-  const formOptions = {
-    fields: [
-      {
-        label: "Title",
-        name: "rawFrontmatter.title",
-        component: "text",
-      },
-      {
-        label: "Body",
-        name: "rawMarkdownBody",
-        component: "markdown",
-      }
-    ]
-  }
+function faqTemplate(props) {
   const page = props.data.markdownRemark
-  //const [data, form] = useLocalRemarkForm(page, formOptions)
-  const [markdownRemark] = useLocalRemarkForm(props.data.markdownRemark)
-
   return (
     <Layout>
       <Typography variant="h4">
@@ -46,8 +25,7 @@ function FaqTemplate(props) {
   )
 }
 
-export default FaqTemplate
-//export default remarkForm(faqTemplate)
+export default remarkForm(faqTemplate)
 
 export const pageQuery = graphql`
   query faqQuery ($slug: String!) {
@@ -65,16 +43,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-/*export const pageQuery = graphql`
-  query faqQuery {
-    markdownRemark(fields: {slug: {eq: "/faq"}}) {
-      id
-      html
-      frontmatter {
-        title
-        description
-      }
-    }
-  }
-`*/
