@@ -10,14 +10,12 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const faq = path.resolve(`./src/templates/faq.js`)
+  const faqTemplate = path.resolve(`./src/templates/faq.js`)
+  const guidesTemplate = path.resolve(`./src/templates/guides.js`)
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
+        faq: allMarkdownRemark(filter: {fields: {slug: {eq: "/faq/"}}}) {
           edges {
             node {
               fields {
@@ -38,15 +36,12 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create faq page.
-  const posts = result.data.allMarkdownRemark.edges
-
-  posts.forEach((post, index) => {
-
+  result.data.faq.edges.forEach(({ node }) => {
     createPage({
-      path: post.node.fields.slug,
-      component: faq,
+      path: node.fields.slug,
+      component: faqTemplate,
       context: {
-        slug: post.node.fields.slug,
+        slug: node.fields.slug,
       },
     })
   })
