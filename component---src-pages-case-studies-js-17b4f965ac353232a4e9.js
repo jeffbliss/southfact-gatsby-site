@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{Bxj0:function(e,a,n){"use strict";n.r(a),n.d(a,"default",(function(){return i}));var t=n("q1tI"),r=n.n(t),c=n("Bl7J"),u=n("ofer");function i(){return r.a.createElement(c.a,null,r.a.createElement(u.a,{variant:"h3"},"Case Studies"),r.a.createElement(u.a,{variant:"h5"},"Placeholder page for case studies"))}}}]);
+//# sourceMappingURL=component---src-pages-case-studies-js-17b4f965ac353232a4e9.js.map
