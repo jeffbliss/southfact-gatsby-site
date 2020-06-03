@@ -19,7 +19,7 @@ module.exports = {
       path: `${__dirname}/content`,
       },
     },
-    {
+    /*{
       resolve: "gatsby-plugin-tinacms",
       options: {
         sidebar: {
@@ -31,7 +31,7 @@ module.exports = {
           "gatsby-tinacms-remark"
         ],
       },
-    },
+    },*/
     `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

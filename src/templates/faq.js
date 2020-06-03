@@ -2,14 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Typography from '@material-ui/core/Typography';
-import { TinaCMS } from 'tinacms'
-import { remarkForm } from 'gatsby-tinacms-remark'
-import { HtmlFieldPlugin, MarkdownFieldPlugin } from 'react-tinacms-editor'
+//import { TinaCMS } from 'tinacms'
+//import { remarkForm } from 'gatsby-tinacms-remark'
+//import { HtmlFieldPlugin, MarkdownFieldPlugin } from 'react-tinacms-editor'
 
-const cms = new TinaCMS()
+/*const cms = new TinaCMS()
 
 cms.plugins.add(HtmlFieldPlugin)
-cms.plugins.add(MarkdownFieldPlugin)
+cms.plugins.add(MarkdownFieldPlugin)*/
 
 function faqTemplate(props) {
   const page = props.data.markdownRemark
@@ -25,21 +25,18 @@ function faqTemplate(props) {
   )
 }
 
-export default remarkForm(faqTemplate)
+export default faqTemplate
+//export default remarkForm(faqTemplate)
 
 export const pageQuery = graphql`
   query faqQuery ($slug: String!) {
     markdownRemark(fields: {slug: {eq: $slug}}) {
       id
       html
-      fileRelativePath
-      rawFrontmatter
-      rawMarkdownBody
       frontmatter {
         title
         description
       }
-      ...TinaRemark
     }
   }
 `
