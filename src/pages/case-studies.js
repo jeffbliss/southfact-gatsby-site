@@ -9,6 +9,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Link from '../components/Link';
+import Button from '@material-ui/core/Button';
 
 export default function guides({
   data, // this prop will be injected by the GraphQL query below.
@@ -19,13 +20,18 @@ export default function guides({
       <React.Fragment>
         <ListItem alignItems="flex-start">
           <ListItemAvatar>
-            <Avatar alt="CS" src="http://www.southfact.com/sites/all/themes/lsfbootstrap/logo.png" />
+            <Avatar variant="square" alt="CS" src={edge.node.frontmatter.linkImage} />
           </ListItemAvatar>
           <ListItemText
-            primary={<Link to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link>}
-            secondary={edge.node.frontmatter.description}
+            secondary={<Typography variant="body1">{edge.node.frontmatter.description}</Typography>}
           >
-            <Link to={edge.node.fields.slug}></Link>
+            <Button
+              size="small"
+            >
+              <Link to={edge.node.fields.slug}>
+                {edge.node.frontmatter.title}
+              </Link>
+            </Button>
           </ListItemText>
         </ListItem>
         <Divider variant="inset" component="li" />
@@ -51,6 +57,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
+            linkImage
           }
           fields {
             slug
