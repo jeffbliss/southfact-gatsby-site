@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SimpleCard({ cardImage, cardImageTitle, content, href, linkText }) {
+function SimpleCard({ content, href, linkText }) {
   const classes = useStyles();
 
   return (
