@@ -9,4 +9,4 @@ description: "CASE STUDY: Identifying Forest HarvestsForest managers are tasked 
 
 ## Here's a picture in markdown
 
-![Llama](./llama.png#margin-bottom=300px;)
+![Llama](./llama.png)

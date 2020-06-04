@@ -1,10 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Divider from '@material-ui/core/Divider';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Card from '../components/card'
-import Link from '../components/link';
+import Link from '../components/Link';
 
 export default function guides({
   data, // this prop will be injected by the GraphQL query below.
@@ -12,26 +16,29 @@ export default function guides({
   const { allMarkdownRemark } = data
   const page = allMarkdownRemark.edges
     .map (edge =>
-      <Grid item sm={3} xs={12}>
-        <Card
-          content={edge.node.frontmatter.description}
-          linkText={<Link to={edge.node.fields.slug}> Read More </Link>}
-        />
-      </Grid>
+      <React.Fragment>
+        <ListItem alignItems="flex-start">
+          <ListItemAvatar>
+            <Avatar alt="CS" src="http://www.southfact.com/sites/all/themes/lsfbootstrap/logo.png" />
+          </ListItemAvatar>
+          <ListItemText
+            primary={<Link to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link>}
+            secondary={edge.node.frontmatter.description}
+          >
+            <Link to={edge.node.fields.slug}></Link>
+          </ListItemText>
+        </ListItem>
+        <Divider variant="inset" component="li" />
+      </React.Fragment>
     )
   return (
     <Layout>
       <Typography variant="h3">
         Case Studies
       </Typography>
-      <Grid
-        container
-        justify="center"
-        spacing={3}
-        style={{ padding: 10 }}
-      >
+      <List>
         {page}
-      </Grid>
+      </List>
     </Layout>
   ) 
 }
