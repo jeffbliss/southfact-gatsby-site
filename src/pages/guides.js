@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Video from "../components/video"
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 export default function guides({
   data, // this prop will be injected by the GraphQL query below.
@@ -11,17 +13,19 @@ export default function guides({
   const { allMarkdownRemark } = data
   const page = allMarkdownRemark.edges
     .map (edge =>
-      <React.Fragment>
         <Grid item sm={4} xs={12}>
-          <Typography variant="h5">
-            {edge.node.frontmatter.description}
-          </Typography>
-          <Video
-            videoSrcURL={edge.node.frontmatter.videoSourceURL}
-            videoTitle={edge.node.frontmatter.videoTitle}
-          />
+          <Card>
+            <CardContent>
+              <Typography variant="h5" align="center">
+                {edge.node.frontmatter.description}
+                <Video
+                  videoSrcURL={edge.node.frontmatter.videoSourceURL}
+                  videoTitle={edge.node.frontmatter.videoTitle}
+                />
+              </Typography>
+            </CardContent>
+          </Card>
         </Grid>
-      </React.Fragment>
     )
   return (
     <Layout>
