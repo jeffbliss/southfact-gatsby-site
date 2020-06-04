@@ -23,15 +23,9 @@ export default function guides({
             <Avatar variant="square" alt="CS" src={edge.node.frontmatter.linkImage} />
           </ListItemAvatar>
           <ListItemText
-            secondary={<Typography variant="body1">{edge.node.frontmatter.description}</Typography>}
+            secondary={<Button size="small"><Link to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link></Button>}
           >
-            <Button
-              size="small"
-            >
-              <Link to={edge.node.fields.slug}>
-                {edge.node.frontmatter.title}
-              </Link>
-            </Button>
+            {<Typography variant="body1">{edge.node.frontmatter.description}</Typography>}
           </ListItemText>
         </ListItem>
         <Divider variant="inset" component="li" />
