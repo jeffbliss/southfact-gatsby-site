@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{I2Wq:function(e,t,a){"use strict";a.r(t);var o=a("q1tI"),n=a.n(o),r=a("ZmoE"),l=a("ofer"),c=a("tRbT");t.default=function(){return n.a.createElement(c.a,{style:{backgroundColor:"#707070",height:"100vh"},maxWidth:"xl"},n.a.createElement(r.a,null),n.a.createElement(l.a,{variant:"h4",style:{color:"white"}},"Methods"),n.a.createElement(l.a,{variant:"h5",style:{color:"white"}},"Placeholder for Methods Page"))}}}]);
-//# sourceMappingURL=component---src-pages-methods-js-e01024f0b88fffe62c0c.js.map

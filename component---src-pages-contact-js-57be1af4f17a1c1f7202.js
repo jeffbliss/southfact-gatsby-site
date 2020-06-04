@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{"Cuy+":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),u=t("ZmoE");n.default=function(){return l.a.createElement(l.a.Fragment,null,l.a.createElement(u.a,null),l.a.createElement("h4",null,"Contact Page"))}}}]);
-//# sourceMappingURL=component---src-pages-contact-js-57be1af4f17a1c1f7202.js.map
