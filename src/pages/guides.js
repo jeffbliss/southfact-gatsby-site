@@ -1,11 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Video from "../components/video"
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Divider from '@material-ui/core/Divider';
+import ListItemText from '@material-ui/core/ListItemText';
 
 export default function guides({
   data, // this prop will be injected by the GraphQL query below.
@@ -13,33 +14,27 @@ export default function guides({
   const { allMarkdownRemark } = data
   const page = allMarkdownRemark.edges
     .map (edge =>
-        <Grid item sm={4} xs={12}>
-          <Card>
-            <CardContent>
-              <Typography variant="h5" align="center">
-                {edge.node.frontmatter.description}
-                <Video
-                  videoSrcURL={edge.node.frontmatter.videoSourceURL}
-                  videoTitle={edge.node.frontmatter.videoTitle}
-                />
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+      <React.Fragment>
+        <ListItem alignItems="flex-start">
+          <ListItemText>
+            {edge.node.frontmatter.description}
+            <Video
+              videoSrcURL={edge.node.frontmatter.videoSourceURL}
+              videoTitle={edge.node.frontmatter.videoTitle}
+            />
+          </ListItemText>
+        </ListItem>
+        <Divider variant="inset" component="li" />
+      </React.Fragment>
     )
   return (
     <Layout>
       <Typography variant="h3">
         Guides
       </Typography>
-      <Grid
-        container
-        justify="center"
-        spacing={3}
-        style={{ padding: 10 }}
-      >
+      <List>
         {page}
-      </Grid>
+      </List>
     </Layout>
   ) 
 }
