@@ -32,7 +32,28 @@ module.exports = {
         ],
       },
     },*/
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 400,
+              wrapperStyle:
+                'border: 1px solid black; margin-left: 0!important; margin-right: 0!important;',
+            },
+          },
+          `remark-image-attributes`,
+          {
+            resolve: "gatsby-remark-image-attributes",
+            options: {
+              styleAttributes: [`margin-bottom`],
+            },
+          }
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

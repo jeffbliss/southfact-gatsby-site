@@ -9,7 +9,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Typography from '@material-ui/core/Typography';
-import Link from '../components/Link';
+import Link from './link';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
@@ -139,7 +139,7 @@ export default function ButtonAppBar() {
                         </Link>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
-                        <Link to='/caseStudies'>
+                        <Link to='/case-studies'>
                           Case Studies
                         </Link>
                       </MenuItem>

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Card from '../components/card'
-import Link from '../components/Link';
+import Link from '../components/link';
 import Layout from "../components/layout"
 
 export default function IndexPage({ data }) {
@@ -31,7 +31,7 @@ export default function IndexPage({ data }) {
         style={{ padding: 10 }}
       >
         <Grid item sm={3} xs={12}>
-          <Card 
+          <Card
           content="Recent and historical yearly changes"
           href="https://southfact.github.io/southfact-map-v2/dist/#Home"
           linkText="Forest Change Viewer"

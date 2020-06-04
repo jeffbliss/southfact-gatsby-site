@@ -10,8 +10,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const faqTemplate = path.resolve(`./src/templates/faq.js`)
-  const guidesTemplate = path.resolve(`./src/templates/guides.js`)
+  const markdownTemplate = path.resolve(`./src/templates/markdown.js`)
   const result = await graphql(
     `
       {
@@ -27,7 +26,20 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        caseStudies: allMarkdownRemark(filter: {fields: {slug: {regex: "/case-studies/"}}}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
       }
+      
     `
   )
 
@@ -39,7 +51,18 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.faq.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: faqTemplate,
+      component: markdownTemplate,
+      context: {
+        slug: node.fields.slug,
+      },
+    })
+  })
+
+  // Create case studies pages.
+  result.data.caseStudies.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: markdownTemplate,
       context: {
         slug: node.fields.slug,
       },

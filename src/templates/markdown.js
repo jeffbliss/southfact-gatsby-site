@@ -15,7 +15,7 @@ function faqTemplate(props) {
   const page = props.data.markdownRemark
   return (
     <Layout>
-      <Typography variant="h4">
+      <Typography variant="h3">
         {page.frontmatter.title}
       </Typography>
       <Typography>
