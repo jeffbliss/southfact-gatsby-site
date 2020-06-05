@@ -1,7 +1,7 @@
 ---
-title: guides # This is important in order for it to appear in the Guides page. Do not change this.
+title: "How to Create a Subscription Notification"
 order: 3
-description: "How to Create a Subscription Notification"
+description: "Enter description here" # currently unused
 videoSourceURL: https://www.youtube.com/embed/Dkd6tG_UxlI
 videoTitle: "How to Create a Subscription Notification"
 ---

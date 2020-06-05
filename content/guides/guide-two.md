@@ -1,7 +1,7 @@
 ---
-title: guides # This is important in order for it to appear in the Guides page. Do not change this.
+title: "How to Submit a Custom Request"
 order: 2
-description: "How to Submit a Custom Request"
+description: "Enter description here" # currently unused
 videoSourceURL: https://www.youtube.com/embed/JbJtq99AKS4
 videoTitle: "How to Submit a Custom Request"
 ---

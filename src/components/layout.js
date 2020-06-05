@@ -9,6 +9,7 @@ import customTheme from '../theme'
 export default function Layout({ children }) {
   return (
     <ThemeProvider theme={customTheme}>
+      <CssBaseline/>
       <Helmet>
         <meta // responsive meta tag: https://material-ui.com/getting-started/usage/#responsive-meta-tag
           name="viewport"
@@ -19,7 +20,6 @@ export default function Layout({ children }) {
       <Box p={2}>
         {children}
       </Box>
-      <CssBaseline/>
     </ThemeProvider>
   )
 }

@@ -14,6 +14,18 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
+        about: allMarkdownRemark(filter: {fields: {slug: {eq: "/about/"}}}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
         faq: allMarkdownRemark(filter: {fields: {slug: {eq: "/faq/"}}}) {
           edges {
             node {
@@ -46,6 +58,17 @@ exports.createPages = async ({ graphql, actions }) => {
   if (result.errors) {
     throw result.errors
   }
+
+  // Create about page.
+  result.data.about.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: markdownTemplate,
+      context: {
+        slug: node.fields.slug,
+      },
+    })
+  })
 
   // Create faq page.
   result.data.faq.edges.forEach(({ node }) => {

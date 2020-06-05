@@ -13,11 +13,12 @@ import Link from '../components/Link';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
-import Popper from '@material-ui/core/Popper';
+import Popover from '@material-ui/core/Popover';
 import Paper from '@material-ui/core/Paper';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Grow from '@material-ui/core/Grow';
 import Box from '@material-ui/core/Box';
+import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -53,19 +54,18 @@ export default function ButtonAppBar() {
   )
 
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const id = open ? 'simple-popover' : undefined;
 
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
-    }
-
-    setOpen(false);
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   function handleListKeyDown(event) {
@@ -98,7 +98,7 @@ export default function ButtonAppBar() {
         </Box>
         <Toolbar mr={10}>
           <Button className={classes.button} size='large' color='inherit'>
-            <Link to='/' color='inherit'>
+            <Link to='/'>
               Home
             </Link>
           </Button>
@@ -108,64 +108,68 @@ export default function ButtonAppBar() {
           <Button className={classes.button} size='large' color='inherit' href="https://code.earthengine.google.com/5513af5039ed666eda62492d0d7b7e9d?hideCode=true">
             Custom Requests
           </Button>
-          <Box>
-            <Button
-              className={classes.button}
-              ref={anchorRef}
-              aria-controls={open ? 'menu-list-grow' : undefined}
-              aria-haspopup="true"
-              onClick={handleToggle}
-              color='inherit'
-              size='large'
-            >
-              Learn
-            </Button>
-            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-        {({ TransitionProps, placement }) => (
-              <Grow
-                {...TransitionProps}
-                style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-              >
-                <Paper>
-                  <ClickAwayListener onClickAway={handleClose}>
-                    <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                      <MenuItem onClick={handleClose}>
-                        <Link to='/about'>
-                          About
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        <Link to='/case-studies'>
-                          Case Studies
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        <Link to='/faq'>
-                          Frequently Asked Questions
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        <Link to='/guides'>
-                          Guides
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        <Link to='/resources'>
-                          Resources
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={handleClose}>
-                        <Link to='/methods'>
-                          Methods
-                        </Link>
-                      </MenuItem>
-                    </MenuList>
-                  </ClickAwayListener>
-                </Paper>
-              </Grow>
-            )}
-            </Popper>
-          </Box>
+          <Button
+            className={classes.button}
+            ref={anchorRef}
+            aria-controls={open ? 'menu-list-grow' : undefined}
+            aria-haspopup="true"
+            onClick={handleClick}
+            color='inherit'
+            size='large'
+          >
+            Learn
+          </Button>
+          <Popover
+            id={id}
+            open={open}
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'center',
+            }}
+          >
+            <Paper>
+              <ClickAwayListener onClickAway={handleClose}>
+                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                  <MenuItem onClick={handleClose}>
+                    <Link to='/about'>
+                      About
+                    </Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to='/case-studies'>
+                      Case Studies
+                    </Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to='/faq'>
+                      Frequently Asked Questions
+                    </Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to='/guides'>
+                      Guides
+                    </Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to='/resources'>
+                      Resources
+                    </Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to='/methods'>
+                      Methods
+                    </Link>
+                  </MenuItem>
+                </MenuList>
+              </ClickAwayListener>
+            </Paper>
+          </Popover>
           <Typography className={classes.contact}>
             <Button className={classes.button} size='large' color='inherit'>
               <Link to='/contact' color='inherit'>

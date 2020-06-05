@@ -17,7 +17,7 @@ export default function guides({
       <React.Fragment>
         <ListItem alignItems="flex-start">
           <ListItemText>
-            {edge.node.frontmatter.description}
+            {edge.node.frontmatter.title}
             <Video
               videoSrcURL={edge.node.frontmatter.videoSourceURL}
               videoTitle={edge.node.frontmatter.videoTitle}
@@ -41,12 +41,11 @@ export default function guides({
 
 export const pageQuery = graphql`
   query guidesQuery {
-    allMarkdownRemark(filter: {frontmatter: {title: {eq: "guides"}}}, sort: {fields: frontmatter___order}) {
+    allMarkdownRemark(filter: {fields: {slug: {regex: "/guides/"}}}, sort: {fields: frontmatter___order}) {
       edges {
         node {
           frontmatter {
             title
-            description
             videoSourceURL
             videoTitle
             order
