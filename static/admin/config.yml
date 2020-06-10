@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
   branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
 
 media_folder: static/img
 public_folder: /img
@@ -9,7 +15,6 @@ collections:
   - name: 'about'
     label: 'About'
     folder: 'content/about'
-    create: true
     slug: 'index'
     media_folder: ''
     public_folder: ''
@@ -20,3 +25,15 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: "case studies"
+    label: "Case-Studies"
+    folder: "content/case-studies"
+    create: true
+    slug: "{{title}}/index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "linkImage", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
