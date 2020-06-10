@@ -17,8 +17,6 @@ import Popover from '@material-ui/core/Popover';
 import Paper from '@material-ui/core/Paper';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Box from '@material-ui/core/Box';
-import Tab from '@material-ui/core/Tab';
-import Tabs from '@material-ui/core/Tabs';
 
 const useStyles = makeStyles((theme) => ({
   button: {

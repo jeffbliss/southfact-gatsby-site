@@ -12,6 +12,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,8 +41,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
+              backgroundColor: 'none',
               wrapperStyle:
-                'border: 1px solid black; margin-left: 0!important; margin-right: 0!important;',
+                'margin-left: 0!important;',
             },
           },
         ],
