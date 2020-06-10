@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"Cuy+":function(n,e,a){"use strict";a.r(e),a.d(e,"default",(function(){return u}));var t=a("q1tI"),o=a.n(t),c=a("Bl7J"),r=a("ofer");function u(){return o.a.createElement(c.a,null,o.a.createElement(r.a,{variant:"h3"},"Contact"),o.a.createElement(r.a,{variant:"h5"},"If you have any questions, comments, or concerns please send an email to info@southfact.com"))}}}]);
+//# sourceMappingURL=component---src-pages-contact-js-34aff5f7f1b1396f38af.js.map

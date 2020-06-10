@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"9I2h":function(e,n,a){"use strict";a.r(n),a.d(n,"default",(function(){return u}));var r=a("q1tI"),t=a.n(r),c=a("Bl7J"),o=a("ofer");function u(){return t.a.createElement(c.a,null,t.a.createElement(o.a,{variant:"h3"},"Resources"),t.a.createElement(o.a,{variant:"h5"},"Placeholder for Resources"))}}}]);
-//# sourceMappingURL=component---src-pages-resources-js-81ffd9667e778632cfbf.js.map
