@@ -14,8 +14,8 @@ import Button from '@material-ui/core/Button';
 export default function guides({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { allMdx } = data
-  const page = allMdx.edges
+  const { allMarkdownRemark } = data
+  const page = allMarkdownRemark.edges
     .map (edge =>
       <React.Fragment>
         <ListItem alignItems="flex-start">
@@ -45,7 +45,7 @@ export default function guides({
 
 export const pageQuery = graphql`
   query caseStudiesQuery {
-    allMdx(filter: {fields: {slug: {regex: "/case-studies/"}}}, sort: {fields: frontmatter___date}) {
+    allMarkdownRemark(filter: {fields: {slug: {regex: "/case-studies/"}}}, sort: {fields: frontmatter___date}) {
       edges {
         node {
           frontmatter {

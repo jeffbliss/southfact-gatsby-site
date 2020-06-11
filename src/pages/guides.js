@@ -11,8 +11,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 export default function guides({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { allMdx } = data
-  const page = allMdx.edges
+  const { allMarkdownRemark } = data
+  const page = allMarkdownRemark.edges
     .map (edge =>
       <React.Fragment>
         <ListItem alignItems="flex-start">
@@ -41,7 +41,7 @@ export default function guides({
 
 export const pageQuery = graphql`
   query guidesQuery {
-    allMdx(filter: {fields: {slug: {regex: "/guides/"}}}, sort: {fields: frontmatter___order}) {
+    allMarkdownRemark(filter: {fields: {slug: {regex: "/guides/"}}}, sort: {fields: frontmatter___order}) {
       edges {
         node {
           frontmatter {

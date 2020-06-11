@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-        about: allMdx(filter: {fields: {slug: {eq: "/about/"}}}) {
+        about: allMarkdownRemark(filter: {fields: {slug: {eq: "/about/"}}}) {
           edges {
             node {
               fields {
@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
-        faq: allMdx(filter: {fields: {slug: {eq: "/faq/"}}}) {
+        faq: allMarkdownRemark(filter: {fields: {slug: {eq: "/faq/"}}}) {
           edges {
             node {
               fields {
@@ -38,7 +38,7 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
-        caseStudies: allMdx(filter: {fields: {slug: {regex: "/case-studies/"}}}) {
+        caseStudies: allMarkdownRemark(filter: {fields: {slug: {regex: "/case-studies/"}}}) {
           edges {
             node {
               fields {
@@ -96,7 +96,7 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `Mdx`) {
+  if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
