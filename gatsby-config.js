@@ -31,6 +31,9 @@ module.exports = {
                 'margin-left: 0!important;',
             },
           },
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
         ],
       },
     },
