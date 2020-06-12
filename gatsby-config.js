@@ -7,12 +7,13 @@ module.exports = {
     title: `SouthFACT`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-material-ui`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/static/img`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,24 +25,28 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          /*{
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               wrapperStyle:
                 'margin-left: 0!important;',
+              maxWidth: 650,
+              linkImagesToOriginal: true,
             },
-          },*/
-          {
-            resolve: `gatsby-remark-images-anywhere`,
-            options: {
-              staticDir: 'static',
-              wrapperStyle:
-                'margin-left: 0!important;',
-            }
           },
+          
         ],
       },
     },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -26,7 +26,7 @@ The primary purpose of the SouthFACT project is to support efforts to identify a
 
 # Project Area
 The initial phase of the SouthFACT project includes the 13 Southern states, encompassing 142 World Reference System (WRS) – 2 path / row areas that intersect one or more of these states.
-![Project Area](/img/test.png)
+![Project Area](./test.png)
 
 # Funding and Project Participants
 The SouthFACT project is made possible through the collaborative efforts of state forestry agencies in the South, with funding support from the U.S. Forest Service Southern Region (Region 8). Southern state forestry agencies were awarded a 2014 competitive Redesign grant under the Cooperative Forestry Assistance Act to complete the project. The N.C. Forest Service is serving as the lead state responsible for facilitating the development of the applications through the Southern Group of State Foresters (SGSF).
