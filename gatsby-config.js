@@ -24,17 +24,19 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
+          /*{
             resolve: `gatsby-remark-images`,
             options: {
               wrapperStyle:
                 'margin-left: 0!important;',
             },
-          },
+          },*/
           {
             resolve: `gatsby-remark-images-anywhere`,
             options: {
               staticDir: 'static',
+              wrapperStyle:
+                'margin-left: 0!important;',
             }
           },
         ],
