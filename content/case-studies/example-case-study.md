@@ -5,6 +5,7 @@ description: "CASE STUDY: Identifying Forest Harvests. Forest managers are
   tasked with tracking harvest sites to monitor best management practices and to
   manage water quality objectives. The steps in this use case show how to use
   the SouthFACT applications to find forest harvests in Eastern North Carolina."
+linkImage: /logo.png
 ---
 # Header One
 

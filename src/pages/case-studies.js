@@ -20,7 +20,7 @@ export default function guides({
       <React.Fragment>
         <ListItem alignItems="flex-start">
           <ListItemAvatar>
-            <Avatar variant="square" alt="CS" src={edge.node.frontmatter.linkImage} />
+            <Avatar variant="square" alt="CS" src={edge.node.frontmatter.linkImage.publicURL} />
           </ListItemAvatar>
           <ListItemText
             secondary={<Button size="small"><Link to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link></Button>}
@@ -51,7 +51,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
-            linkImage
+            linkImage {
+              publicURL
+            }
           }
           fields {
             slug

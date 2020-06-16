@@ -6,6 +6,7 @@ description: "CASE STUDY: Lorem ipsum dolor sit amet, consectetur adipiscing
   ac. Suspendisse varius orci non convallis malesuada. Sed sem est, volutpat at
   nibh eget, consequat accumsan nisi. Morbi id lectus justo. Etiam sit amet erat
   id metus dapibus placerat."
+linkImage: /logo.png
 ---
 # Example Case Study Two Title
 
