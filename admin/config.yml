@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
+  repo: southfact/southfact.github.io
   branch: master
+  site_domain: admiring-wright-56a7c3.netlify.com
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
