@@ -14,33 +14,23 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'about'
-    label: 'About'
-    folder: 'content/about'
-    slug: 'index'
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-
-  - name: 'faq'
-    label: 'FAQ'
-    folder: 'content/faq'
-    slug: 'index'
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/content/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: "src/content/faq/index.md"
+        name: 'faq'
+        label: 'FAQ'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: "case studies"
     label: "Case-Studies"
