@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: southfact/southfact.github.io/southfact-gatsby-site
+  repo: southfact/southfact.github.io
   branch: master
   site_domain: admiring-wright-56a7c3.netlify.app
   commit_messages:
