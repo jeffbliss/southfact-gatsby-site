@@ -29,7 +29,7 @@ The primary purpose of the SouthFACT project is to support efforts to identify a
 
 # Project Area
 
-The initial phase of the SouthFACT project includes the 13 Southern states, encompassing 142 World Reference System (WRS) – 2 path / row areas that intersect one or more of these states.
+This phase of the SouthFACT project includes 15 Southern states and territories including Puerto Rico and the Virgin Islands, encompassing 149 World Reference System (WRS) – 2 path / row areas that intersect one or more of these states/territories.
 
 ![Project Area Image](./test.png "Project Area Image")
 
