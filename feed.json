@@ -1,0 +1,13 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "SouthFACT",
+    "description": "",
+    "home_page_url": "https://southfact.github.io/southfact-gatsby-site",
+    "feed_url": "https://southfact.github.io/southfact-gatsby-site/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Jeff Bliss"
+    },
+    "items": [
+    ]
+}
