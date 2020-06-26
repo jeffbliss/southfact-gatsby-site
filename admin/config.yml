@@ -4,7 +4,6 @@ backend:
   repo: southfact/southfact-gatsby-site
   branch: master
   site_domain: admiring-wright-56a7c3.netlify.app
-  publish_mode: editorial_workflow
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
@@ -17,6 +16,8 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+
+publish_mode: editorial_workflow
 site_url: https://southfact.github.io/southfact-gatsby-site/
 display_url: https://southfact.github.io/southfact-gatsby-site/
 
