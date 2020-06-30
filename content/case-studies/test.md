@@ -6,7 +6,7 @@ description: "CASE STUDY: TEST ipsum dolor sit amet, consectetur adipiscing
   ac. Suspendisse varius orci non convallis malesuada. Sed sem est, volutpat at
   nibh eget, consequat accumsan nisi. Morbi id lectus justo. Etiam sit amet erat
   id metus dapibus placerat."
-linkImage: /llama.png
+linkImage: /logo.png
 ---
 # Netlify CMS Test
 
