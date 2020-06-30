@@ -17,7 +17,8 @@ backend:
 media_folder: static/img
 public_folder: /img
 
-publish_mode: editorial_workflow
+# uncomment out publish_mode when/if we can figure out how to implement it with a draft site and prod site
+# publish_mode: editorial_workflow 
 site_url: https://southfact.github.io/southfact-gatsby-site/
 display_url: https://southfact.github.io/southfact-gatsby-site/
 
