@@ -1,4 +1,5 @@
 ---
+templateKey: 'about'
 title: Project Overview
 description: This markdown generates content for the about page
 ---

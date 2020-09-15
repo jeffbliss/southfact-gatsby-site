@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/southfact-gatsby-site",
   siteMetadata: {
     author: `jbliss, dmichelson`,
-    githubRepo: "https://github.com/SouthFACT/southfact-gatsby-site",
+    githubRepo: `https://github.com/SouthFACT/southfact-gatsby-site`,
     description: `Southern Forest Area Change Tools - SouthFACT`,
     title: `SouthFACT`,
   },
@@ -44,11 +44,13 @@ module.exports = {
     },
     `gatsby-plugin-netlify-cms-paths`,
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-leaflet',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
+    'gatsby-plugin-resolve-src',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
