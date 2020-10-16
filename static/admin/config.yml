@@ -1,9 +1,9 @@
 backend:
   name: github # for developing from github
   #name: git-gateway # for local development
-  repo: southfact/southfact-gatsby-site
+  repo: jeff-bliss/southfact-gatsby-site
   branch: master
-  site_domain: admiring-wright-56a7c3.netlify.app
+  site_domain: https://master.d1qkthq11athze.amplifyapp.com/
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
