@@ -1,6 +1,6 @@
 backend:
   name: github # for developing from github
-  repo: jeff-bliss/southfact-gatsby-site
+  repo: jeffbliss/southfact-gatsby-site
   branch: master
   base_url: https://vine-spangled-ocicat.glitch.me/
   commit_messages:
