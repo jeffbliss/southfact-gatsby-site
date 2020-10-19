@@ -1,8 +1,8 @@
 backend:
-  name: github # for developing from github
-  repo: jeffbliss/southfact-gatsby-site
+  name: github
   branch: master
-  base_url: https://vine-spangled-ocicat.glitch.me/
+  repo: jeffbliss/southfact-gatsby-site
+  base_url: https://vine-spangled-ocicat.glitch.me
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
@@ -18,8 +18,6 @@ public_folder: /img
 
 # uncomment out publish_mode when/if we can figure out how to implement it with a draft site and prod site
 # publish_mode: editorial_workflow 
-site_url: https://southfact.github.io/southfact-gatsby-site/
-display_url: https://southfact.github.io/southfact-gatsby-site/
 
 collections:
   - name: "pages"
