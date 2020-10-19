@@ -1,9 +1,8 @@
 backend:
   name: github # for developing from github
-  #name: git-gateway # for local development
   repo: jeff-bliss/southfact-gatsby-site
   branch: master
-  site_domain: https://master.d1qkthq11athze.amplifyapp.com/
+  base_url: https://vine-spangled-ocicat.glitch.me/
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
